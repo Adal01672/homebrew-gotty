@@ -21,7 +21,7 @@ class Gotty < Formula
   url "https://github.com/yudai/gotty/releases/download/$VERSION/gotty_darwin_amd64.tar.gz"
   sha256 "$SHA256_DARWIN"
 
-  if OS.linux? && Hardware.is_64_bit?
+    if OS.linux? && Hardware::CPU.is_64_bit?
       url "https://github.com/yudai/gotty/releases/download/$VERSION/gotty_linux_amd64.tar.gz"
       sha256 "$SHA256_LINUX"
   end
